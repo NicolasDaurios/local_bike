@@ -1,0 +1,52 @@
+version: 2
+
+sources:
+  - name: local_bike
+    database: final-project-databird
+    schema: local_bike
+    description: "Données brutes importées depuis BigQuery"
+    tables:
+      - name: brands
+        description: "Liste des marques de produits"
+
+      - name: categories
+        description: "Liste des catégories de produits"
+
+      - name: customers
+        description: "Informations sur les clients"
+        columns:
+          - name: customer_id
+            tests:
+              - unique
+              - not_null
+
+      - name: order_items
+        description: "Lignes de commandes associées aux produits"
+        columns:
+          - name: order_id
+            description: "ID unique composé de order_id et product_id"
+            tests:
+              - not_null
+      
+          
+
+      - name: orders
+        description: "Commandes passées par les clients"
+        columns:
+          - name: order_id
+            
+            tests:
+              - unique
+              - not_null
+
+      - name: products
+        description: "Produits vendus"
+
+      - name: staffs
+        description: "Employés des magasins"
+
+      - name: stocks
+        description: "Stocks par magasin et produit"
+
+      - name: stores
+        description: "Magasins physiques"
