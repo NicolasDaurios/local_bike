@@ -1,0 +1,16 @@
+name: "my_projects"
+version: "1.0"
+config-version: 2
+
+profile: "my_projects"
+
+# Configuration des cibles (ex: pour BigQuery ou autre base de données)
+target-path: "target" # Où stocker les fichiers de sortie de dbt
+clean-targets:
+  - "target"
+  - "dbt_modules"
+
+models:
+  my_projects:
+    local_bike:
+      +materialized: table
