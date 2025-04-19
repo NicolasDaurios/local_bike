@@ -34,9 +34,12 @@ sources:
         description: "Commandes passées par les clients"
         columns:
           - name: order_id
-            
             tests:
               - unique
+              - not_null
+        
+          - name: customer_id
+            tests:
               - not_null
 
       - name: products
