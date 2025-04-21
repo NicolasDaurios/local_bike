@@ -1,18 +1,18 @@
 version: 2
 
-soources : 
+sources : 
 
   - name: local_bike
     schema: local_bike
     tables:
-      - name: brands
-      - name: categories
-      - name: customers
-      - name: order_items
-      - name: orders
-      - name: products
-      - name: staffs
-      - name: stocks
-      - name: stores
+      - name: brands_BG
+      - name: categories_BG
+      - name: customers_BG
+      - name: order_items_BG
+      - name: orders_BG
+      - name: products_BG
+      - name: staffs_BG
+      - name: stocks_BG
+      - name: stores_BG
 
 
